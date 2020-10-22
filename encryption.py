@@ -17,9 +17,9 @@ mas_txt = '----- Start of correspondence -----''\n'     # Program start message
 
 def StartApp():
     """" The main function responsible for the operation of the program """
-    middle_message = ''
-    crypto_2_message = ''
-    crypto_3_message = ''
+    middle_message = ''     # First pass message
+    crypto_2_message = ''   # Second pass message
+    crypto_3_message = ''   # Third pass message
 
     print('\n' 'Encrypt - 1, Decipher - 2, Exit - 0' '\n' 'Encrypt/Decipher?')
     c_or_d = int(input('Change: '))    # Choice: encrypt, decrypt or exit
@@ -75,8 +75,8 @@ def StartApp():
             crypto_3_message = ''
 
         elif c_or_d == 2:       # Block for decrypting messages
-            s = input('- Decipher: ').strip()   # Принимаются на ввод все символы с клавиатуры пользователя
-            if s == '0':        # Условие перезапуска программы
+            s = input('- Decipher: ').strip()   # All characters from the user's keyboard are accepted for input
+            if s == '0':        # Program restart condition
                 print('\n''--Restart--')
                 StartApp()
             # Next comes the decryption in 3 passes
